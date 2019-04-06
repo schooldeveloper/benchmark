@@ -2,6 +2,9 @@ package org.schooldeveloper.microbenchmark.benchmark.classes;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
+import org.schooldeveloper.microbenchmark.benchmark.classes.clazz.ClassWithNonVirtualMethod;
+import org.schooldeveloper.microbenchmark.benchmark.classes.clazz.ClassWithStaticMethod;
+import org.schooldeveloper.microbenchmark.benchmark.classes.clazz.ClassWithVirtualMethod;
 import org.schooldeveloper.microbenchmark.config.Billon;
 
 /**

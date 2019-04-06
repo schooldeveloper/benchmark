@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.openjdk.jmh.annotations.Benchmark;
+import org.schooldeveloper.microbenchmark.benchmark.calendars.clazz.DateUtils;
 import org.schooldeveloper.microbenchmark.config.HundredThousand;
 
 /**

@@ -1,4 +1,4 @@
-package org.schooldeveloper.microbenchmark.benchmark.serializable;
+package org.schooldeveloper.microbenchmark.benchmark.serializable.clazz;
 
 import lombok.Data;
 

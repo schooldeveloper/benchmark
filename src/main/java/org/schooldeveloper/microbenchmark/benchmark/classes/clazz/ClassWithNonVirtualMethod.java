@@ -1,4 +1,4 @@
-package org.schooldeveloper.microbenchmark.benchmark.classes;
+package org.schooldeveloper.microbenchmark.benchmark.classes.clazz;
 
 public class ClassWithNonVirtualMethod {
     private long primitiveValueVar;

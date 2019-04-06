@@ -1,4 +1,4 @@
-package org.schooldeveloper.microbenchmark.benchmark.calendars;
+package org.schooldeveloper.microbenchmark.benchmark.calendars.clazz;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,9 +1,9 @@
 package org.schooldeveloper.microbenchmark.benchmark.singletons;
 
 import org.openjdk.jmh.annotations.Benchmark;
-import org.schooldeveloper.microbenchmark.benchmark.singletons.impl.DoubleCheckedLockingSingleton;
-import org.schooldeveloper.microbenchmark.benchmark.singletons.impl.InitializationOnDemandHolderSingleton;
-import org.schooldeveloper.microbenchmark.benchmark.singletons.impl.SynchronizedSingleton;
+import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.DoubleCheckedLockingSingleton;
+import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.InitializationOnDemandHolderSingleton;
+import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.SynchronizedSingleton;
 import org.schooldeveloper.microbenchmark.config.TenMillon;
 
 /**

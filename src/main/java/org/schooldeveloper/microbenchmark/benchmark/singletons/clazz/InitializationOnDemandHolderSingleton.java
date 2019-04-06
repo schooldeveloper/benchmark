@@ -1,4 +1,4 @@
-package org.schooldeveloper.microbenchmark.benchmark.singletons.impl;
+package org.schooldeveloper.microbenchmark.benchmark.singletons.clazz;
 
 import lombok.Getter;
 import lombok.Setter;

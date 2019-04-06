@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openjdk.jmh.annotations.Benchmark;
+import org.schooldeveloper.microbenchmark.benchmark.calendars.clazz.DateUtils;
 import org.schooldeveloper.microbenchmark.config.TenThousand;
 
 /**
@@ -21,23 +22,22 @@ public class ApplyPattern extends TenThousand {
     private static final Date date = new Date();
 
     @Benchmark
-    public void applyPattern() {
+    public String applyPattern() {
         SimpleDateFormat sdf = DateUtils.getDateFormat();
         sdf.applyPattern(PATTERN);
-        sdf.format(date);
+        return sdf.format(date);
     }
 
     @Benchmark
-    public void applyLocalizedPattern() {
+    public String applyLocalizedPattern() {
         SimpleDateFormat sdf = DateUtils.getDateFormat();
         sdf.applyLocalizedPattern(PATTERN);
-        sdf.format(date);
+        return sdf.format(date);
     }
 
     @Benchmark
-    public void staticToString() {
-
-        DateUtils.toString(date, PATTERN);
+    public String staticToString() {
+        return DateUtils.toString(date, PATTERN);
     }
 
 }

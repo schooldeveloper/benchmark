@@ -1,6 +1,8 @@
 package org.schooldeveloper.microbenchmark.benchmark.serializable;
 
 import org.openjdk.jmh.annotations.Benchmark;
+import org.schooldeveloper.microbenchmark.benchmark.serializable.clazz.Clazz;
+import org.schooldeveloper.microbenchmark.benchmark.serializable.clazz.Zerializable;
 import org.schooldeveloper.microbenchmark.config.Billon;
 
 /**
@@ -15,6 +17,6 @@ public class ClassVsSerializable extends Billon {
 
     @Benchmark
     public void serializable() {
-        new WithSerializable();
+        new Zerializable();
     }
 }
