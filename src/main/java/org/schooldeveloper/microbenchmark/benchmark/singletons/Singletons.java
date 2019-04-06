@@ -2,7 +2,7 @@ package org.schooldeveloper.microbenchmark.benchmark.singletons;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.DoubleCheckedLockingSingleton;
-import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.InitializationOnDemandHolderSingleton;
+import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.InitializationOnDemandSingleton;
 import org.schooldeveloper.microbenchmark.benchmark.singletons.clazz.SynchronizedSingleton;
 import org.schooldeveloper.microbenchmark.config.TenMillon;
 
@@ -19,7 +19,7 @@ public class Singletons extends TenMillon {
 
     @Benchmark
     public String initializationOnDemandHolder() {
-        return InitializationOnDemandHolderSingleton.getInstance().getData();
+        return InitializationOnDemandSingleton.getInstance().getData();
     }
 
     @Benchmark

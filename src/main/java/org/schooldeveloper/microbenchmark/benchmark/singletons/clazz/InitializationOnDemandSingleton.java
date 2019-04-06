@@ -8,18 +8,18 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public final class InitializationOnDemandHolderSingleton {
+public final class InitializationOnDemandSingleton {
 
     private String data;
 
-    private InitializationOnDemandHolderSingleton() {
+    private InitializationOnDemandSingleton() {
     }
 
-    public static InitializationOnDemandHolderSingleton getInstance() {
+    public static InitializationOnDemandSingleton getInstance() {
         return InitializationOnDemandHolder.INSTANCE;
     }
 
     private static class InitializationOnDemandHolder {
-        private static final InitializationOnDemandHolderSingleton INSTANCE = new InitializationOnDemandHolderSingleton();
+        private static final InitializationOnDemandSingleton INSTANCE = new InitializationOnDemandSingleton();
     }
 }
