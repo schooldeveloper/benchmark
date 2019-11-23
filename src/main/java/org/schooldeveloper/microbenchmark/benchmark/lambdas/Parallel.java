@@ -21,9 +21,7 @@ public class Parallel extends Hundred {
         URL url = BufferedReaderUse.class.getClassLoader().getResource("file-text.txt");
 
         try (FileReader fr = new FileReader(url.getPath()); BufferedReader br = new BufferedReader(fr)) {
-            return br.lines().reduce((x, y) ->
-                (x.length() > y.length()) ? x : y
-            ).orElse(null);
+            return br.lines().reduce((x, y) -> (x.length() > y.length()) ? x : y).orElse(null);
         }
     }
 
@@ -31,8 +29,7 @@ public class Parallel extends Hundred {
     public String parallel() throws IOException {
         URL url = BufferedReaderUse.class.getClassLoader().getResource("file-text.txt");
         try (FileReader fr = new FileReader(url.getPath()); BufferedReader br = new BufferedReader(fr)) {
-            return br.lines().parallel().reduce((x, y) ->
-                (x.length() > y.length()) ? x : y).orElse(null);
+            return br.lines().parallel().reduce((x, y) -> (x.length() > y.length()) ? x : y).orElse(null);
         }
 
     }
