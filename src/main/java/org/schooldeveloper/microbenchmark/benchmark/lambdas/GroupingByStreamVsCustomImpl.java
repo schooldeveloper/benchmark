@@ -43,7 +43,7 @@ public class GroupingByStreamVsCustomImpl extends HundredThousand {
     }
 
     @Benchmark
-    public Map<Integer, Map<Integer, Data>> customImplOldTime() {
+    public Map<Integer, Map<Integer, Data>> customImplOldSchool() {
         Map<Integer, Map<Integer, Data>> map = new HashMap<>();
         for (Data d : data) {
             Map<Integer, Data> subMap = map.get(d.getType());
