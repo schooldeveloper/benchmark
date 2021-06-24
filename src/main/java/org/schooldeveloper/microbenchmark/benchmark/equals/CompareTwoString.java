@@ -4,11 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 import org.schooldeveloper.microbenchmark.config.Billon;
 
 /**
  * Created by @SchoolDeveloper on 16/08/2017.
  */
+@State(Scope.Thread)
 public class CompareTwoString extends Billon {
 
     private String string = "string";

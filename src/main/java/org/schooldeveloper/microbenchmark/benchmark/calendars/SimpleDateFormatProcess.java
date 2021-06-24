@@ -10,23 +10,23 @@ import org.schooldeveloper.microbenchmark.config.HundredThousand;
 
 /**
  * For a {@link org.schooldeveloper.microbenchmark.config.HundredThousand}
- *
+ * <p>
  * Run complete. Total time: 00:00:21
  * Benchmark                            Mode  Cnt  Score   Error  Units
  * SimpleDateFormatProcess.calendar       ss   50  0,035 ± 0,006   s/op
  * SimpleDateFormatProcess.instance       ss   50  0,113 ± 0,009   s/op
  * SimpleDateFormatProcess.statically     ss   50  0,027 ± 0,004   s/op
  * SimpleDateFormatProcess.threadLocal    ss   50  0,027 ± 0,004   s/op
- *
- * For {@link org.schooldeveloper.microbenchmark.config.Millon}
- *
+ * <p>
+ * For {@link org.schooldeveloper.microbenchmark.config.Million}
+ * <p>
  * Run complete. Total time: 00:01:43
  * Benchmark                            Mode  Cnt  Score   Error  Units
  * SimpleDateFormatProcess.calendar       ss   50  0,288 ± 0,019   s/op
  * SimpleDateFormatProcess.instance       ss   50  0,947 ± 0,034   s/op
  * SimpleDateFormatProcess.statically     ss   50  0,241 ± 0,016   s/op
  * SimpleDateFormatProcess.threadLocal    ss   50  0,240 ± 0,016   s/op
- *
+ * <p>
  * Created by @SchoolDeveloper on 04/09/2017.
  */
 public class SimpleDateFormatProcess extends HundredThousand {

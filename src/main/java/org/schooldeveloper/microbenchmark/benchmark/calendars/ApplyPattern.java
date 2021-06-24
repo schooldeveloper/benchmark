@@ -9,9 +9,9 @@ import org.schooldeveloper.microbenchmark.config.TenThousand;
 
 /**
  * For a {@link TenThousand}
- *
+ * <p>
  * Run complete. Total time: 00:00:08
- *
+ * <p>
  * Benchmark                           Mode  Cnt  Score   Error  Units
  * ApplyPattern.applyLocalizedPattern    ss   50  0,014 ± 0,005   s/op
  * ApplyPattern.applyPattern             ss   50  0,012 ± 0,002   s/op

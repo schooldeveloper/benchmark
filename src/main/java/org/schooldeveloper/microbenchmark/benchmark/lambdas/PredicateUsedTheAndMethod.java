@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
-import org.schooldeveloper.microbenchmark.config.HundredMillon;
+import org.schooldeveloper.microbenchmark.config.HundredMillion;
 
 import lombok.Builder;
 import lombok.Data;
 
-public class PredicateUsedTheAndMethod extends HundredMillon {
+public class PredicateUsedTheAndMethod extends HundredMillion {
 
     public static final String STRING = "string";
     private static final Predicate<Entity> BY_STRING = e -> STRING.equals(e.getString());
@@ -22,7 +22,7 @@ public class PredicateUsedTheAndMethod extends HundredMillon {
     private static final Predicate<Entity> ALL_FILTER_AND = BY_STRING.and(BY_INTEGER).and(BY_BOOLEAN);
     private static final Predicate<Entity> ALL_FILTER_AND_INNER = BY_STRING.and(BY_INTEGER.and(BY_BOOLEAN));
     private static final Predicate<Entity> ALL_FILTER_AND_INLINE =
-        e -> STRING.equals(e.getString()) && Integer.MIN_VALUE == e.getInteger() && Boolean.TRUE.equals(e.getString());
+            e -> STRING.equals(e.getString()) && Integer.MIN_VALUE == e.getInteger() && Boolean.TRUE.equals(e.getString());
 
     private List<Entity> entities;
 

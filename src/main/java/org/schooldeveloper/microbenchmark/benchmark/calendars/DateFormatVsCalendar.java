@@ -11,7 +11,7 @@ import org.schooldeveloper.microbenchmark.config.HundredThousand;
 /**
  * For {@link HundredThousand}
  * Run complete. Total time: 00:00:19
- *
+ * <p>
  * Benchmark                                    Mode  Cnt  Score   Error  Units
  * DateFormatVsCalendar.calendarDateAndTime       ss   50  0,015 ± 0,002   s/op
  * DateFormatVsCalendar.calendarOnlyTime          ss   50  0,018 ± 0,001   s/op

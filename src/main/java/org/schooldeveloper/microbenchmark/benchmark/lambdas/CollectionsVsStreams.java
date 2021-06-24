@@ -10,12 +10,9 @@ import org.openjdk.jmh.annotations.Param;
 import org.openjdk.jmh.annotations.Setup;
 import org.schooldeveloper.microbenchmark.config.Thousand;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Created by @SchoolDeveloper on 30/08/2017.
  */
-@Slf4j
 public class CollectionsVsStreams extends Thousand {
     @Param({"1", "5", "10", "100"})
     private int limit;

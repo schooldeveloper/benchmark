@@ -7,7 +7,7 @@ import org.schooldeveloper.microbenchmark.config.Billon;
 
 /**
  * Created by @SchoolDeveloper on 06/04/2019.
- *
+ * <p>
  * Benchmark                          (valueType)  Mode  Cnt  Score   Error  Units
  * Conditionals.ifOrElseReturn             STRING    ss   50  5,784 ± 0,029   s/op
  * Conditionals.ifOrElseReturn             NUMBER    ss   50  7,254 ± 0,033   s/op
@@ -57,5 +57,10 @@ public class Conditionals extends Billon {
             type = Type.STRING;
         }
         return type;
+    }
+
+    @Benchmark
+    public Type ternaryOperator() {
+        return NUMBER.equals(valueType) ? Type.INTEGER : Type.STRING;
     }
 }

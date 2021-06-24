@@ -6,9 +6,9 @@ import java.util.stream.Stream;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
-import org.schooldeveloper.microbenchmark.config.TenThousand;
+import org.schooldeveloper.microbenchmark.config.Million;
 
-public class Loops extends TenThousand {
+public class Loops extends Million {
 
     private List<String> strings;
 
@@ -18,31 +18,42 @@ public class Loops extends TenThousand {
     }
 
     @Benchmark
-    public String loopFor() {
-        String newString = null;
+    public String loopForOldS() {
+        StringBuilder newString = new StringBuilder();
         for (int i = 0; i < strings.size(); i++) {
-            newString = strings.get(i) + "loop";
+            newString.append(strings.get(i));
         }
-        return newString;
+        return newString.toString();
     }
 
     @Benchmark
-    public String loopForWithInitSize() {
-        String newString = null;
+    public void measureName() {
+    }
+
+    @Benchmark
+    public String loopForOLdSWithInitSize() {
+        StringBuilder newString = new StringBuilder();
         int size = strings.size();
         for (int i = 0; i < size; i++) {
-            newString = strings.get(i) + "loop";
+            newString.append(strings.get(i));
         }
-        return newString;
+        return newString.toString();
     }
 
     @Benchmark
     public String loopForEach() {
-        String newString = null;
+        StringBuilder newString = new StringBuilder();
         for (String string : strings) {
-            newString = string + "loop";
+            newString.append(string);
         }
-        return newString;
+        return newString.toString();
+    }
+
+    @Benchmark
+    public String streamForEach() {
+        StringBuilder newString = new StringBuilder();
+        strings.forEach(newString::append);
+        return newString.toString();
     }
 
 }

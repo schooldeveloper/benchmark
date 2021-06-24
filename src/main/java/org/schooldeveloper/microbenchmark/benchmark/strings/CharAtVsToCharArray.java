@@ -1,18 +1,12 @@
 package org.schooldeveloper.microbenchmark.benchmark.strings;
 
 import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.annotations.Measurement;
-import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.Param;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.State;
-import org.openjdk.jmh.annotations.Warmup;
+import org.schooldeveloper.microbenchmark.config.Million;
 
 /**
  * Created by @SchoolDeveloper on 16/08/2017.
- *
+ * <p>
  * Benchmark                                                                                                                                 (text)  Mode  Cnt  Score    Error  Units
  * CharAtVsToCharArray.charAt                                                                                                                     1    ss  100  0,006 ±  0,001   s/op
  * CharAtVsToCharArray.charAt                                                                                                            0123456789    ss  100  0,009 ±  0,001   s/op
@@ -24,12 +18,7 @@ import org.openjdk.jmh.annotations.Warmup;
  * CharAtVsToCharArray.toCharArrayWithForeach                                                                                            0123456789    ss  100  0,019 ±  0,002   s/op
  * CharAtVsToCharArray.toCharArrayWithForeach  0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789    ss  100  0,053 ±  0,005   s/op
  */
-@State(Scope.Thread)
-@BenchmarkMode(Mode.SingleShotTime)
-@Measurement(batchSize = 1000000, iterations = 20)
-@Warmup(batchSize = 1000000, iterations = 10)
-@Fork(5)
-public class CharAtVsToCharArray {
+public class CharAtVsToCharArray extends Million {
     @Param({"1", "0123456789", "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"})
     private String text;
 

@@ -16,7 +16,7 @@ import lombok.Getter;
 
 /**
  * Benchmark                                            Mode  Cnt  Score   Error  Units
- * GroupingByStreamVsCustomImpl.customImplOldTime         ss   50  2,597 ± 0,051   s/op
+ * GroupingByStreamVsCustomImpl.customImplOldS       ss   50  2,597 ± 0,051   s/op
  * GroupingByStreamVsCustomImpl.customImplWithIfAbsent    ss   50  2,312 ± 0,071   s/op
  * GroupingByStreamVsCustomImpl.groupingBy                ss   50  2,861 ± 0,034   s/op
  */
@@ -43,7 +43,7 @@ public class GroupingByStreamVsCustomImpl extends HundredThousand {
     }
 
     @Benchmark
-    public Map<Integer, Map<Integer, Data>> customImplOldSchool() {
+    public Map<Integer, Map<Integer, Data>> customImplOldS() {
         Map<Integer, Map<Integer, Data>> map = new HashMap<>();
         for (Data d : data) {
             Map<Integer, Data> subMap = map.get(d.getType());

@@ -15,18 +15,18 @@ import lombok.Getter;
 
 /**
  * For HundredThousand
- *
+ * <p>
  * Run complete. Total time: 00:01:37
- *
+ * <p>
  * Benchmark                                     Mode  Cnt  Score   Error  Units
  * CalendarNewInstanceVsOneInstance.newInstance    ss   50  0,772 ± 0,033   s/op
  * CalendarNewInstanceVsOneInstance.oneInstance    ss   50  0,434 ± 0,026   s/op
  * CalendarNewInstanceVsOneInstance.withForEach    ss   50  0,453 ± 0,031   s/op
- *
+ * <p>
  * For TenThousand
- *
+ * <p>
  * Run complete. Total time: 00:00:18
- *
+ * <p>
  * Benchmark                                     Mode  Cnt  Score   Error  Units
  * CalendarNewInstanceVsOneInstance.newInstance    ss   50  0,096 ± 0,014   s/op
  * CalendarNewInstanceVsOneInstance.oneInstance    ss   50  0,050 ± 0,007   s/op

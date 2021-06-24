@@ -8,9 +8,9 @@ import java.util.stream.Stream;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
-import org.schooldeveloper.microbenchmark.config.TenMillon;
+import org.schooldeveloper.microbenchmark.config.TenMillion;
 
-public class MapToList extends TenMillon {
+public class MapToList extends TenMillion {
 
     private Map<Integer, String> map;
 
