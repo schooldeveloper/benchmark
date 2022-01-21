@@ -8,6 +8,13 @@ import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 import org.schooldeveloper.microbenchmark.config.Million;
 
+/**
+ * Benchmark                       Mode  Cnt  Score   Error  Units
+ * Loops.forEach                     ss   50  0,234 ± 0,013   s/op
+ * Loops.forOldSchool                ss   50  0,225 ± 0,013   s/op
+ * Loops.forOldSchoolWithInitSize    ss   50  0,241 ± 0,015   s/op
+ * Loops.streamForEach               ss   50  0,247 ± 0,017   s/op
+ */
 public class Loops extends Million {
 
     private List<String> strings;
@@ -18,7 +25,7 @@ public class Loops extends Million {
     }
 
     @Benchmark
-    public String loopForOldS() {
+    public String forOldSchool() {
         StringBuilder newString = new StringBuilder();
         for (int i = 0; i < strings.size(); i++) {
             newString.append(strings.get(i));
@@ -27,11 +34,7 @@ public class Loops extends Million {
     }
 
     @Benchmark
-    public void measureName() {
-    }
-
-    @Benchmark
-    public String loopForOLdSWithInitSize() {
+    public String forOldSchoolWithInitSize() {
         StringBuilder newString = new StringBuilder();
         int size = strings.size();
         for (int i = 0; i < size; i++) {
@@ -41,7 +44,7 @@ public class Loops extends Million {
     }
 
     @Benchmark
-    public String loopForEach() {
+    public String forEach() {
         StringBuilder newString = new StringBuilder();
         for (String string : strings) {
             newString.append(string);
